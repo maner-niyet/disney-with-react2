@@ -85,7 +85,6 @@ const NavMenu = styled.div`
                 transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
                 transform: scaleX(0);
             }
-
         }
 
         &:hover {
@@ -102,5 +101,4 @@ const UserImg = styled.img`
     height: 48px;
     border-radius: 50%;
     cursor: pointer;
-
 ` 
