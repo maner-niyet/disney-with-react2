@@ -1,7 +1,25 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
+import {useParams} from "react-router-dom"
+import db from "../firebase"
+import {collection, getDocs, where, query} from "firebase/firestore"
 
 function Detail() {
+    const {id} = useParams();
+    const [movie, setMovie] = useState()
+    console.log(id)
+
+    useEffect(() => {
+        const moviesRef = collection(db, "movies");
+        const q = query(moviesRef, where("id", "==", id))
+        getDocs(q)
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc => {
+                setMovie(doc.data())
+            }))
+        })
+    }, [])
+    
     return (
         <Container>
             <Background>
