@@ -12,13 +12,11 @@ function Login() {
                 </Description>
                 <LogoTwo src="/images/cta-logo-two.png"/>
             </Wrapper>
-            
         </Container>
     )
 }
 
 export default Login
-
 
 const Container = styled.div`
     min-height: calc(100vh - 70px);
@@ -51,10 +49,10 @@ const Wrapper = styled.div`
     text-align: center;
     align-items: center;
 `
-
 const LogoOne = styled.img`
 `
 const LogoTwo = styled.img`
+    width: 100%;
 `
 const SignUp = styled.a`
     width: 100%;
